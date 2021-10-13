@@ -31,8 +31,9 @@ case $opt in
         echo "=========> 3. Uninstall APPs by packageName"
         #adb shell dumpsys window | find "mCurrentFocus"  #for Window Only
         packageNames=(
-            com.drkumo.com
-            com.example.invokemsteam
+            org.linhome
+            com.cpuid.cpu_z
+            com.microsoft.teams
         )
         for ((i=0; i < ${#packageNames[@]}; i++ ))
         do 
@@ -44,8 +45,10 @@ case $opt in
     4)
         echo "=========> 5. Install Apps"
         apk_file=(
-          $(PWD)/apps/microsoft-teams.apk
-	      $(PWD)/apps/cpu-z.apk
+          $(PWD)/apps/CPU-Z_v1.41_apkpure.com.apk
+	      $(PWD)/apps/Linhome_v5.0.0_apkpure.com.apk
+          $(PWD)/apps/MicrosoftTeams_v1416_1.0.0.2021153501_apkpure.com.apk
+
         )
         for ((i=0; i < ${#apk_file[@]}; i++ ))
         do 

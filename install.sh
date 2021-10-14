@@ -44,12 +44,14 @@ case $opt in
 
     4)
         echo "=========> 5. Install Apps"
-        apk_file=(
-          $(PWD)/apps/CPU-Z_v1.41_apkpure.com.apk
-	      $(PWD)/apps/Linhome_v5.0.0_apkpure.com.apk
-          $(PWD)/apps/MicrosoftTeams_v1416_1.0.0.2021153501_apkpure.com.apk
+        # apk_file=(
+        #   $(PWD)/apps/CPU-Z_v1.41_apkpure.com.apk
+	    #   $(PWD)/apps/Linhome_v5.0.0_apkpure.com.apk
+        #   $(PWD)/apps/MicrosoftTeams_v1416_1.0.0.2021153501_apkpure.com.apk
 
-        )
+        # )
+        echo "Install all the apk files in folder ./apps"
+        apk_file=($(find ./apps -name '*.apk'))
         for ((i=0; i < ${#apk_file[@]}; i++ ))
         do 
             echo "--> $i  install:  ${apk_file[$i]}"
